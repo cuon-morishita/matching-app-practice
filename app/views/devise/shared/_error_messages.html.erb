@@ -1,0 +1,12 @@
+<% if resource.errors.any? %>
+  <div id="error_explanation" data-turbo-cache="false" style="background-color: #f8d7da; color: #721c24; padding: 1rem; border-radius: 5px; margin-bottom: 1.5rem; border: 1px solid #f5c6cb;">
+    <h3 style="margin-bottom: 0.5rem; font-size: 1rem;">
+      <%= pluralize(resource.errors.count, "個") %>のエラーが発生しました
+    </h3>
+    <ul style="margin-left: 1.5rem; margin-bottom: 0;">
+      <% resource.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

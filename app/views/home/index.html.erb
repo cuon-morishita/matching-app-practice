@@ -1,0 +1,32 @@
+<div class="hero">
+    <h1>マッチングアプリへようこそ</h1>
+    <p>新しい出会いを見つけましょう</p>
+
+    <% if user_signed_in? %>
+    <p style="font-size: 1.1rem; color: #667eea; margin-top: 1rem;">
+        ログイン中です。素敵な出会いを見つけましょう！
+    </p>
+    <% else %>
+    <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+        <%= link_to "新規登録", new_user_registration_path, class: "btn-primary", style: "width: auto; padding: 1rem 2rem; text-decoration: none; display: inline-block;" %>
+        <%= link_to "ログイン", new_user_session_path, class: "btn-primary", style: "width: auto; padding: 1rem 2rem; text-decoration: none; display: inline-block; background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);" %>
+    </div>
+    <% end %>
+</div>
+
+<div class="features">
+    <div class="feature-card">
+        <h3>🔍 プロフィール検索</h3>
+        <p>あなたの理想の相手を見つけましょう。詳細な検索機能で効率的にマッチング。</p>
+    </div>
+
+    <div class="feature-card">
+        <h3>💬 メッセージ機能</h3>
+        <p>マッチした相手と気軽にメッセージ交換。安全なコミュニケーション環境を提供。</p>
+    </div>
+
+    <div class="feature-card">
+        <h3>🔒 安全・安心</h3>
+        <p>セキュアな認証システムで個人情報を守ります。安心してご利用いただけます。</p>
+    </div>
+</div>
